@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f0e9">
+<title>Nos casamos · James & Delicia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="preloader">
+  <div class="envelope">
+    <div class="wax">J&D</div>
+  </div>
+  <p>NOS CASAMOS</p>
+  <h1 id="openNames">James &amp; Delicia</h1>
+  <span id="openDate">26 · 09 · 2026</span>
+  <button id="openBtn">Presionar para abrir</button>
+</div>
+
+<audio id="bgMusic" loop preload="auto"><source src="assets/musica/musica.mp3" type="audio/mpeg"></audio>
+<button id="musicToggle" class="music-toggle" aria-label="Música">♫</button>
+<div id="site" class="site-hidden">
+<header class="hero">
+  <div class="hero-shade"></div>
+  <div class="hero-content reveal">
+    <span class="kicker">NUESTRA BODA</span>
+    <h1 id="names">James &amp; Delicia</h1>
+    <div class="ornament">✦</div>
+    <p id="date">26 · 09 · 2026</p>
+    <p id="place">Ate · Lima · Perú</p>
+  </div>
+  <div class="scroll">DESLIZA <span>↓</span></div>
+</header>
+
+<main>
+<section class="story paper reveal">
+  <span class="kicker">NUESTRA HISTORIA</span>
+  <h2 id="storyNames">James &amp; Delicia</h2>
+  <div class="line"></div>
+  <p class="quote" id="quote">“Nuestra historia no comienza hoy, se fortalece con el amor de quienes nos acompañan.”</p>
+  <p id="storyDate">26 · 09 · 2026</p>
+  <p class="muted" id="storyPlace">Ate · Lima · Perú</p>
+</section>
+
+<section class="parents reveal">
+  <div class="inner">
+    <span class="kicker">CON LA BENDICIÓN DE DIOS Y DE NUESTROS PADRES</span>
+    <div class="parent-grid">
+      <article><span>PADRES DEL NOVIO</span><h3 id="groomParents">Teodosio Raúl Espinoza Caparachin<br>Luz Sergia Ramirez Martínez</h3></article>
+      <article><span>PADRES DE LA NOVIA</span><h3 id="brideParents">Valeriano Elipio Matsuo Cano<br>Dorotea Quispe Chiquillan</h3></article>
+      <article><span>PADRINOS</span><h3 id="godparents">Hugon Huaranga Paucar<br>&amp; Marcelina Arroyo Cotera</h3></article>
+    </div>
+    <p class="muted">con su bendición y amor nos acompañan</p>
+  </div>
+</section>
+
+<section class="count reveal">
+  <span class="kicker">FALTA POCO</span>
+  <h2>Cuenta regresiva para nuestro gran día</h2>
+  <p>El tiempo vuela cuando se acerca el día más importante. Acompáñanos a celebrarlo.</p>
+  <div class="timer">
+    <div><b id="days">00</b><small>Días</small></div>
+    <div><b id="hours">00</b><small>Horas</small></div>
+    <div><b id="minutes">00</b><small>Min</small></div>
+    <div><b id="seconds">00</b><small>Seg</small></div>
+  </div>
+</section>
+
+<section class="events paper reveal">
+  <span class="kicker">DETALLES DEL EVENTO</span>
+  <h2>Ceremonia &amp; Recepción</h2>
+  <p class="intro">Cada detalle fue pensado con amor, para que vivas con nosotros cada instante de este gran día.</p>
+  <div class="event-grid">
+    <article class="event">
+      <div class="event-icon">♡</div>
+      <span class="kicker">CEREMONIA RELIGIOSA</span>
+      <h3 id="churchName">Parroquia Cristo Salvador</h3>
+      <p id="churchDate">26 de setiembre · 2:30 p.m.</p>
+      <p class="muted" id="churchAddress">Horacio Zevallos Gamez, Km 15 de la Carretera Central — Ate<br>Ref.: a la altura del Colegio Jorge Giles Llanos</p>
+      <a id="churchMap" href="https://maps.google.com/" target="_blank">Ver en Google Maps ↗</a>
+    </article>
+    <article class="event">
+      <div class="event-icon">♢</div>
+      <span class="kicker">RECEPCIÓN</span>
+      <h3 id="receptionName">Local “El Descanso”</h3>
+      <p id="receptionDate">Después de la ceremonia</p>
+      <p class="muted" id="receptionAddress">Urbanización El Descanso Mz. H Lote 5 — Ate, Entrada Huaycán<br>Ref.: Paradero Sauna</p>
+      <a id="receptionMap" href="https://maps.google.com/" target="_blank">Ver en Google Maps ↗</a>
+    </article>
+  </div>
+</section>
+
+<section class="gallery reveal">
+  <span class="kicker">NUESTRA HISTORIA Y FAMILIA</span>
+  <h2>Galería</h2>
+  <p>Cada imagen guarda un pedazo de nuestra historia y el amor que nos trajo hasta aquí.</p>
+  <div id="gallery" class="gallery-grid"></div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <button id="closeLightbox">×</button>
+  <button id="prevPhoto">‹</button>
+  <img id="lightboxImg" src="" alt="Foto">
+  <button id="nextPhoto">›</button>
+  <span id="photoCounter">1 / 9</span>
+</div>
+
+<section class="rsvp paper reveal">
+  <span class="kicker">CONFIRMACIÓN</span>
+  <h2>Cuéntanos si vienes</h2>
+  <p>Tu confirmación nos ayuda a prepararlo todo con amor. Responde antes de la fecha indicada.</p>
+  <form id="rsvp">
+    <input id="guest" required placeholder="Escribe tu nombre completo">
+    <select id="attendance" required>
+      <option value="">¿Asistirás?</option>
+      <option>Sí, ahí estaré</option>
+      <option>No podré ir</option>
+    </select>
+    <select id="people" required>
+      <option value="">Número de personas (incluyéndote)</option>
+      <option>1</option><option>2</option><option>3</option>
+      <option>4</option><option>5</option><option>6</option>
+    </select>
+    <button type="submit">Enviar confirmación</button>
+  </form>
+  <p id="rsvpMsg"></p>
+</section>
+</main>
+
+<footer>
+  <span class="kicker">CON AMOR</span>
+  <h2 id="footerNames">James &amp; Delicia</h2>
+  <p id="footerDate">26 · 09 · 2026 — Ate, Lima, Perú</p>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
